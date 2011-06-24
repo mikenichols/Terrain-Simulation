@@ -1,0 +1,312 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 72.98     22.85    22.85    50092     0.00     0.00  compute_wireframe_indices_rect
+ 17.41     28.30     5.45      181     0.03     0.03  read_from_file
+  8.75     31.04     2.74        1     2.74     8.19  load_data
+  0.61     31.23     0.19     7788     0.00     0.00  update_clipmap_subregion
+  0.10     31.26     0.03  3168952     0.00     0.00  is_terrain_index_valid
+  0.10     31.29     0.03        1     0.03     0.03  initialize_clipmaps
+  0.06     31.31     0.02    13987     0.00     0.00  update_clipmap_center
+  0.03     31.32     0.01                             redraw
+  0.00     31.32     0.00    68656     0.00     0.00  check_for_glerror
+  0.00     31.32     0.00    64913     0.00     0.00  check_for_null
+  0.00     31.32     0.00    48140     0.00     0.00  add3f
+  0.00     31.32     0.00    13987     0.00     0.00  compute_indices
+  0.00     31.32     0.00    13987     0.00     0.00  crop_active_regions
+  0.00     31.32     0.00    13987     0.00     0.00  render_terrain_level
+  0.00     31.32     0.00    13987     0.00     0.00  set_wireframe_color
+  0.00     31.32     0.00    13987     0.00     0.00  update_clipmap_level
+  0.00     31.32     0.00    12035     0.00     0.00  compute_wireframe_indices_Lregion
+  0.00     31.32     0.00     2778     0.00     0.00  normalize3f
+  0.00     31.32     0.00     1952     0.00     0.00  cross3f
+  0.00     31.32     0.00     1952     0.00     0.00  determine_active_regions
+  0.00     31.32     0.00     1952     0.00     0.00  draw_bitmap_string
+  0.00     31.32     0.00     1952     0.00     0.00  verify_cmap_centers
+  0.00     31.32     0.00      859     0.00     0.00  reshape
+  0.00     31.32     0.00      826     0.00     0.00  move
+  0.00     31.32     0.00      362     0.00     0.00  latlon_from_filename
+  0.00     31.32     0.00       33     0.00     0.00  rotate
+  0.00     31.32     0.00        1     0.00     0.00  check_and_set_cmap_size
+  0.00     31.32     0.00        1     0.00     0.00  initialize_index_buffers
+  0.00     31.32     0.00        1     0.00     0.00  load_textures
+  0.00     31.32     0.00        1     0.00     0.00  verify_power_of_two
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.03% of 31.32 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     73.7    0.01   23.09                 redraw [1]
+                0.00   22.85   13987/13987       compute_indices [3]
+                0.00    0.22   13987/13987       update_clipmap_level [7]
+                0.02    0.00   13987/13987       update_clipmap_center [11]
+                0.00    0.00   13987/13987       crop_active_regions [15]
+                0.00    0.00   13987/13987       render_terrain_level [16]
+                0.00    0.00    1952/1952        determine_active_regions [21]
+                0.00    0.00    1952/1952        verify_cmap_centers [23]
+                0.00    0.00    1952/1952        cross3f [20]
+                0.00    0.00    1952/2778        normalize3f [19]
+                0.00    0.00    1952/1952        draw_bitmap_string [22]
+                0.00    0.00    1952/68656       check_for_glerror [12]
+-----------------------------------------------
+               22.85    0.00   50092/50092       compute_indices [3]
+[2]     72.9   22.85    0.00   50092         compute_wireframe_indices_rect [2]
+-----------------------------------------------
+                0.00   22.85   13987/13987       redraw [1]
+[3]     72.9    0.00   22.85   13987         compute_indices [3]
+               22.85    0.00   50092/50092       compute_wireframe_indices_rect [2]
+                0.00    0.00   64079/68656       check_for_glerror [12]
+                0.00    0.00   62127/64913       check_for_null [13]
+                0.00    0.00   48140/48140       add3f [14]
+                0.00    0.00   12035/12035       compute_wireframe_indices_Lregion [18]
+-----------------------------------------------
+                                                 <spontaneous>
+[4]     26.3    0.00    8.22                 main [4]
+                2.74    5.45       1/1           load_data [5]
+                0.03    0.00       1/1           initialize_clipmaps [10]
+                0.00    0.00       1/1           check_and_set_cmap_size [28]
+                0.00    0.00       1/64913       check_for_null [13]
+                0.00    0.00       1/1           initialize_index_buffers [29]
+                0.00    0.00       1/1           load_textures [30]
+-----------------------------------------------
+                2.74    5.45       1/1           main [4]
+[5]     26.2    2.74    5.45       1         load_data [5]
+                5.45    0.00     181/181         read_from_file [6]
+                0.00    0.00     362/362         latlon_from_filename [26]
+                0.00    0.00       2/64913       check_for_null [13]
+-----------------------------------------------
+                5.45    0.00     181/181         load_data [5]
+[6]     17.4    5.45    0.00     181         read_from_file [6]
+                0.00    0.00     181/64913       check_for_null [13]
+-----------------------------------------------
+                0.00    0.22   13987/13987       redraw [1]
+[7]      0.7    0.00    0.22   13987         update_clipmap_level [7]
+                0.19    0.03    7788/7788        update_clipmap_subregion [8]
+                0.00    0.00    2596/64913       check_for_null [13]
+                0.00    0.00    2596/68656       check_for_glerror [12]
+-----------------------------------------------
+                0.19    0.03    7788/7788        update_clipmap_level [7]
+[8]      0.7    0.19    0.03    7788         update_clipmap_subregion [8]
+                0.03    0.00 3168952/3168952     is_terrain_index_valid [9]
+-----------------------------------------------
+                0.03    0.00 3168952/3168952     update_clipmap_subregion [8]
+[9]      0.1    0.03    0.00 3168952         is_terrain_index_valid [9]
+-----------------------------------------------
+                0.03    0.00       1/1           main [4]
+[10]     0.1    0.03    0.00       1         initialize_clipmaps [10]
+                0.00    0.00      16/68656       check_for_glerror [12]
+                0.00    0.00       3/64913       check_for_null [13]
+-----------------------------------------------
+                0.02    0.00   13987/13987       redraw [1]
+[11]     0.1    0.02    0.00   13987         update_clipmap_center [11]
+-----------------------------------------------
+                0.00    0.00       1/68656       load_textures [30]
+                0.00    0.00      12/68656       initialize_index_buffers [29]
+                0.00    0.00      16/68656       initialize_clipmaps [10]
+                0.00    0.00    1952/68656       redraw [1]
+                0.00    0.00    2596/68656       update_clipmap_level [7]
+                0.00    0.00   64079/68656       compute_indices [3]
+[12]     0.0    0.00    0.00   68656         check_for_glerror [12]
+-----------------------------------------------
+                0.00    0.00       1/64913       main [4]
+                0.00    0.00       1/64913       load_textures [30]
+                0.00    0.00       2/64913       load_data [5]
+                0.00    0.00       2/64913       initialize_index_buffers [29]
+                0.00    0.00       3/64913       initialize_clipmaps [10]
+                0.00    0.00     181/64913       read_from_file [6]
+                0.00    0.00    2596/64913       update_clipmap_level [7]
+                0.00    0.00   62127/64913       compute_indices [3]
+[13]     0.0    0.00    0.00   64913         check_for_null [13]
+-----------------------------------------------
+                0.00    0.00   48140/48140       compute_indices [3]
+[14]     0.0    0.00    0.00   48140         add3f [14]
+-----------------------------------------------
+                0.00    0.00   13987/13987       redraw [1]
+[15]     0.0    0.00    0.00   13987         crop_active_regions [15]
+-----------------------------------------------
+                0.00    0.00   13987/13987       redraw [1]
+[16]     0.0    0.00    0.00   13987         render_terrain_level [16]
+                0.00    0.00   13987/13987       set_wireframe_color [17]
+-----------------------------------------------
+                0.00    0.00   13987/13987       render_terrain_level [16]
+[17]     0.0    0.00    0.00   13987         set_wireframe_color [17]
+-----------------------------------------------
+                0.00    0.00   12035/12035       compute_indices [3]
+[18]     0.0    0.00    0.00   12035         compute_wireframe_indices_Lregion [18]
+-----------------------------------------------
+                0.00    0.00     826/2778        move [25]
+                0.00    0.00    1952/2778        redraw [1]
+[19]     0.0    0.00    0.00    2778         normalize3f [19]
+-----------------------------------------------
+                0.00    0.00    1952/1952        redraw [1]
+[20]     0.0    0.00    0.00    1952         cross3f [20]
+-----------------------------------------------
+                0.00    0.00    1952/1952        redraw [1]
+[21]     0.0    0.00    0.00    1952         determine_active_regions [21]
+-----------------------------------------------
+                0.00    0.00    1952/1952        redraw [1]
+[22]     0.0    0.00    0.00    1952         draw_bitmap_string [22]
+-----------------------------------------------
+                0.00    0.00    1952/1952        redraw [1]
+[23]     0.0    0.00    0.00    1952         verify_cmap_centers [23]
+-----------------------------------------------
+                0.00    0.00      45/859         specialKey [52]
+                0.00    0.00     814/859         key [47]
+[24]     0.0    0.00    0.00     859         reshape [24]
+-----------------------------------------------
+                0.00    0.00      45/826         specialKey [52]
+                0.00    0.00     781/826         key [47]
+[25]     0.0    0.00    0.00     826         move [25]
+                0.00    0.00     826/2778        normalize3f [19]
+-----------------------------------------------
+                0.00    0.00     362/362         load_data [5]
+[26]     0.0    0.00    0.00     362         latlon_from_filename [26]
+-----------------------------------------------
+                0.00    0.00      33/33          key [47]
+[27]     0.0    0.00    0.00      33         rotate [27]
+-----------------------------------------------
+                0.00    0.00       1/1           main [4]
+[28]     0.0    0.00    0.00       1         check_and_set_cmap_size [28]
+                0.00    0.00       1/1           verify_power_of_two [31]
+-----------------------------------------------
+                0.00    0.00       1/1           main [4]
+[29]     0.0    0.00    0.00       1         initialize_index_buffers [29]
+                0.00    0.00      12/68656       check_for_glerror [12]
+                0.00    0.00       2/64913       check_for_null [13]
+-----------------------------------------------
+                0.00    0.00       1/1           main [4]
+[30]     0.0    0.00    0.00       1         load_textures [30]
+                0.00    0.00       1/64913       check_for_null [13]
+                0.00    0.00       1/68656       check_for_glerror [12]
+-----------------------------------------------
+                0.00    0.00       1/1           check_and_set_cmap_size [28]
+[31]     0.0    0.00    0.00       1         verify_power_of_two [31]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+
+Index by function name
+
+  [14] add3f                  [22] draw_bitmap_string      [1] redraw
+  [28] check_and_set_cmap_size [10] initialize_clipmaps   [16] render_terrain_level
+  [12] check_for_glerror      [29] initialize_index_buffers [24] reshape
+  [13] check_for_null          [9] is_terrain_index_valid [27] rotate
+   [3] compute_indices        [26] latlon_from_filename   [17] set_wireframe_color
+  [18] compute_wireframe_indices_Lregion [5] load_data    [11] update_clipmap_center
+   [2] compute_wireframe_indices_rect [30] load_textures   [7] update_clipmap_level
+  [15] crop_active_regions    [25] move                    [8] update_clipmap_subregion
+  [20] cross3f                [19] normalize3f            [23] verify_cmap_centers
+  [21] determine_active_regions [6] read_from_file        [31] verify_power_of_two

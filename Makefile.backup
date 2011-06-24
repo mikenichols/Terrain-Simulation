@@ -1,0 +1,31 @@
+CC = gcc
+CFLAGS = -g -Wall
+
+#INCLUDE = -I/u/home2/mykphyre/include -I/u/local/apps/netcdf/current/include
+#LINK = -L/u/home2/mykphyre/lib -L/u/local/apps/netcdf/current/lib/
+#LIBS = -lglut -lIL -lILU -lILUT -lshp -lnetcdf_c++ -lnetcdf -llapack
+LIBS = -lGL -lglut
+
+all: main.o functions.o gl_functions.o globals.o typedefs.o movement.o
+	$(CC) $(CFLAGS) main.o functions.o gl_functions.o globals.o typedefs.o movement.o -o run $(LIBS)
+
+main.o: main.c 
+	$(CC) $(CFLAGS) -c main.c
+
+functions.o: functions.c functions.h
+	$(CC) $(CFLAGS) -c functions.c
+
+gl_functions.o: gl_functions.c gl_functions.h
+	$(CC) $(CFLAGS) -c gl_functions.c
+
+globals.o: globals.c globals.h
+	$(CC) $(CFLAGS) -c globals.c
+
+typedefs.o: typedefs.c typedefs.h
+	$(CC) $(CFLAGS) -c typedefs.c
+
+movement.o: movement.c movement.h
+	$(CC) $(CFLAGS) -c movement.c
+
+clean:
+	rm run *.o
