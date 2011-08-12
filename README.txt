@@ -18,5 +18,5 @@ down arrow: move down
 left arrow: strafe left
 right arrow: strafe right
 
-run this command:
+run this command to check for memory related errors:
 valgrind --tool=memcheck --error-limit=no --track-origins=yes --leak-check=yes ./run 10 31 "top_data/*.hgt"

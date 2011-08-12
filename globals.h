@@ -31,8 +31,8 @@ extern const short DATA_VOID;
 extern const int NUM_COLORS;
 extern const int POINTS_PER_COORD;
 
-////////////////////
-// Globals Variables
+///////////////////
+// Global Variables
 
 extern int win_id;
 extern int screen_width;

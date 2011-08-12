@@ -2,61 +2,61 @@
 #define TYPEDEFS_H
 
 typedef struct {
-	float x;
-	float y;
+    float x;
+    float y;
 } vec2f;
 
 typedef struct {
-	int x;
-	int y;
+    int x;
+    int y;
 } vec2i;
 
 typedef struct {
-	float x;
-	float y;
-	float z;
+    float x;
+    float y;
+    float z;
 } vec3f;
 
 typedef struct {
-	int x;
-	int y;
-	int z;
+    int x;
+    int y;
+    int z;
 } vec3i;
 
 typedef struct {
-	int m;
-	int top_bottom;
-	int left_right;
-	int L_region;
-	int finest;
-	int top_offset;
-	int bottom_offset;
-	int left_offset;
-	int right_offset;
+    int m;
+    int top_bottom;
+    int left_right;
+    int L_region;
+    int finest;
+    int top_offset;
+    int bottom_offset;
+    int left_offset;
+    int right_offset;
 } indexsize_t;
 
 typedef enum {
-	DIR_UP,
-	DIR_DOWN,
-	DIR_LEFT,
-	DIR_RIGHT,
-	DIR_FORWARD,
-	DIR_BACKWARD,
+    DIR_UP,
+    DIR_DOWN,
+    DIR_LEFT,
+    DIR_RIGHT,
+    DIR_FORWARD,
+    DIR_BACKWARD,
 } direction_t;
 
 typedef enum {
-	INDEX_TOP = 0,
-	INDEX_BOTTOM = 1,
-	INDEX_LEFT = 2,
-	INDEX_RIGHT = 3,
-	INDEX_L_REGION = 4,
-	INDEX_FINEST = 5,
+    INDEX_TOP = 0,
+    INDEX_BOTTOM = 1,
+    INDEX_LEFT = 2,
+    INDEX_RIGHT = 3,
+    INDEX_L_REGION = 4,
+    INDEX_FINEST = 5,
 } index_t;
 
 // emulate the bool type of c++
 typedef enum {
-	false = 0,
-	true = 1,
+    false = 0,
+    true = 1,
 } bool;
 
 vec2i add2i(vec2i a, vec2i b);
