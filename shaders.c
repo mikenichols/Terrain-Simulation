@@ -1,6 +1,8 @@
 #define GL_GLEXT_PROTOTYPES
 #define GLX_GLEXT_PROTOTYPES
-#include <GL/glx.h>
+
+/* #include <GL/glx.h> */
+
 #include <GL/glut.h>
 
 #include <stdio.h>

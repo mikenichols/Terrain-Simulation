@@ -1,7 +1,6 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-//#include <GL/glut.h>
 #include "typedefs.h"
 
 void check_and_set_cmap_size();
