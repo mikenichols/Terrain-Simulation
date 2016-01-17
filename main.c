@@ -7,7 +7,11 @@
 #define GL_GLEXT_PROTOTYPES
 // This header includes all necessary gl* headers
 // Must include this before other headers
+#if defined(__APPLE__)
+#include <GLUT/glut.h>
+#else
 #include <GL/glut.h>
+#endif
 
 #include <IL/il.h>
 #define ILUT_USE_OPENGL
